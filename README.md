@@ -1,6 +1,22 @@
 # Micro-Task Platform - Server
 
-Backend API for the Micro-Task and Earning Platform built with Node.js, Express, and MongoDB.
+Backend application for the Micro-Task and Earning Platform, built with Node.js,
+Express, and MongoDB. The server handles authentication, task management,
+payments, and user roles for the platform.
+
+## Screenshots
+
+### Homepage
+
+![Homepage](https://raw.githubusercontent.com/ashikurahman1/micro-task-platform-client/refs/heads/main/src/assets/screenshoots/homepage.png)
+
+### Dashboards
+
+**Admin Dashboard**  
+![Admin Dashboard](https://raw.githubusercontent.com/ashikurahman1/micro-task-platform-client/refs/heads/main/src/assets/screenshoots/admin_dash.png)
+
+**Buyer Dashboard**  
+![Buyer Dashboard](https://raw.githubusercontent.com/ashikurahman1/micro-task-platform-client/refs/heads/main/src/assets/screenshoots/buyer_dash.png)
 
 ## Tech Stack
 
@@ -55,11 +71,13 @@ server/
 ### Installation
 
 1. Install dependencies:
+
 ```bash
 npm install
 ```
 
 2. Create `.env` file:
+
 ```bash
 cp .env.example .env
 ```
@@ -67,6 +85,7 @@ cp .env.example .env
 3. Add your environment variables to `.env`
 
 4. Start development server:
+
 ```bash
 npm run dev
 ```
@@ -81,17 +100,20 @@ The server will run at `http://localhost:5000`
 ## API Endpoints
 
 ### Authentication
+
 - `POST /api/auth/register` - Register new user
 - `POST /api/auth/login` - Login user
 - `POST /api/auth/google` - Google Sign-In
 - `GET /api/auth/me` - Get current user
 
 ### Users (Admin only)
+
 - `GET /api/users` - Get all users
 - `PATCH /api/users/:id/role` - Update user role
 - `DELETE /api/users/:id` - Delete user
 
 ### Tasks
+
 - `GET /api/tasks` - Get available tasks
 - `GET /api/tasks/:id` - Get task details
 - `POST /api/tasks` - Create task (Buyer)
@@ -99,22 +121,26 @@ The server will run at `http://localhost:5000`
 - `DELETE /api/tasks/:id` - Delete task
 
 ### Submissions
+
 - `POST /api/submissions` - Create submission (Worker)
 - `GET /api/submissions/worker/:email` - Get worker submissions
 - `PATCH /api/submissions/:id/approve` - Approve submission (Buyer)
 - `PATCH /api/submissions/:id/reject` - Reject submission (Buyer)
 
 ### Payments
+
 - `POST /api/payments/create-intent` - Create Stripe payment intent
 - `POST /api/payments/confirm` - Confirm payment
 - `GET /api/payments/buyer/:email` - Get payment history
 
 ### Withdrawals
+
 - `POST /api/withdrawals` - Create withdrawal request
 - `GET /api/withdrawals/pending` - Get pending requests (Admin)
 - `PATCH /api/withdrawals/:id/approve` - Approve withdrawal (Admin)
 
 ### Notifications
+
 - `GET /api/notifications/:email` - Get user notifications
 - `PATCH /api/notifications/:id/read` - Mark as read
 
@@ -131,28 +157,21 @@ See `.env.example` for required environment variables.
 - **Withdrawal** - Worker withdrawal requests
 - **Notification** - User notifications
 
-## Screenshots
-
-### Homepage
-![Homepage](https://i.ibb.co.com/4nFppdJD/localhost-5173-7.png)
-
-### Dashboards
-
-**Admin Dashboard**
-![Admin Dashboard](https://i.ibb.co.com/MkfyYSXL/localhost-5173-8.png)
-
-**Buyer Dashboard**
-![Buyer Dashboard](https://i.ibb.co.com/xKYtrGs7/localhost-5173-9.png)
-
 ## What I Learned in this Vibe Coding Project
 
-This project was built using a "Vibe Coding" approach, leveraging AI assistance to accelerate development while maintaining code quality. Key learnings include:
+This project was built using a "Vibe Coding" approach, leveraging AI assistance
+to accelerate development while maintaining code quality. Key learnings include:
 
-- **AI-Assisted Workflow:** Integrating AI agents to handle boilerplate code, debugging, and rapid prototyping.
-- **Complex State Management:** Handling multi-role authentication (Worker/Buyer/Admin) and real-time state updates.
-- **Secure Payments:** Implementing Stripe for secure financial transactions and coin-based economy logic.
-- **System Architecture:** Designing a scalable MERN stack architecture with clean separation of concerns.
-- **Responsive Design:** Using Tailwind CSS and DaisyUI to create a modern, mobile-first interface.
+- **AI-Assisted Workflow:** Integrating AI agents to handle boilerplate code,
+  debugging, and rapid prototyping.
+- **Complex State Management:** Handling multi-role authentication
+  (Worker/Buyer/Admin) and real-time state updates.
+- **Secure Payments:** Implementing Stripe for secure financial transactions and
+  coin-based economy logic.
+- **System Architecture:** Designing a scalable MERN stack architecture with
+  clean separation of concerns.
+- **Responsive Design:** Using Tailwind CSS and DaisyUI to create a modern,
+  mobile-first interface.
 
 ## ⏱Development Time
 
@@ -165,6 +184,7 @@ This project was built using a "Vibe Coding" approach, leveraging AI assistance 
 ## Developer
 
 **Ashikur Rahman**
+
 - GitHub: [@ashikurahman1](https://github.com/ashikurahman1)
 - [LinkedIn](https://linkedin.com/in/ashikur-dev)
 
